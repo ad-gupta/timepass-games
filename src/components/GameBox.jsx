@@ -18,10 +18,10 @@ const GameBox = ({ game, setOpen, setIsToUpdate }) => {
   };
 
   return (
-    <div className="relative w-full sm:items-center md:gap-5 bg-neutral-800 flex max-sm:flex-col p-10 h-96 justify-between rounded-md bg-neutral-800">
+    <div className="relative w-full sm:items-center md:gap-5 bg-neutral-800 flex max-sm:flex-col sm:p-10 max-sm:p-3 h-96 justify-between rounded-md bg-neutral-800">
       <img
         src={game.gamePic}
-        className="sm:w-[40%] max-sm:h-32 h-[80%] lg:h-full rounded-lg shadow-neutral-800 shadow-md"
+        className="sm:w-[40%] max-sm:h-40 max-sm:m-5 max-sm:mb-0 h-[80%] lg:h-full rounded-lg shadow-neutral-800 shadow-md"
       />
       <div key={game.id} className="p-5 w-full">
         <div className="flex flex-col sm:gap-5">
@@ -31,7 +31,7 @@ const GameBox = ({ game, setOpen, setIsToUpdate }) => {
           >
             {game.title}
           </a>
-          <div className="max-md:flex justify-between">
+          <div className="">
             <p className="text-sm text-gray-400">{game.description}</p>
             <p className="text-sm text-gray-400 text-yellow-300">~{game.author}</p>
           </div>
