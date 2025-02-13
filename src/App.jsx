@@ -23,7 +23,7 @@ const App = () => {
   useEffect(() => {
     const fetchGames = async () => {
       try {
-        const response = await axios.get('/api/v1/');
+        const response = await axios.get('https://timepass-server.onrender.com/api/v1/');
         setgames(response.data);
       } catch (error) {
         console.error("Error fetching games:", error);

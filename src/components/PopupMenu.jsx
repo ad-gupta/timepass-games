@@ -41,7 +41,7 @@ const PopupMenu = ({ setToEdit, setOpen, menuVisible, setIsToUpdate, setMenuVisi
 
   const addGame = async() => {
     try{
-      const response = await axios.post('/api/v1/add', {title, description, publishDate, author, url, gamePic});
+      const response = await axios.post('https://timepass-server.onrender.com/api/v1/add', {title, description, publishDate, author, url, gamePic});
       toast.success(response.data.message);
 
       setOpen(false)
@@ -54,7 +54,7 @@ const PopupMenu = ({ setToEdit, setOpen, menuVisible, setIsToUpdate, setMenuVisi
 
   const updateGame = async() => {
     try{
-      const response = await axios.put(`/api/v1/${data._id}`, {title, description, publishDate, author, url, gamePic});
+      const response = await axios.put(`https://timepass-server.onrender.com/api/v1/${data._id}`, {title, description, publishDate, author, url, gamePic});
 
       toast.success(response.data.message);
 

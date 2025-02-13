@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import horrorMystery from "../assets/horror-mystery.jpg";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import PopupMenu from "./PopupMenu";
 import axios from "axios";
@@ -10,15 +9,13 @@ const GameBox = ({ game, setOpen, setIsToUpdate }) => {
 
   const deletGame = async () => {
     try {
-      await axios.delete(`/api/v1/${game._id}`);
+      await axios.delete(`https://timepass-server.onrender.com/api/v1/${game._id}`);
       setMenuVisible((prev) => !prev);
       setIsToUpdate((prev) => !prev);
     } catch (error) {
       console.error("Error deleting game:", error);
     }
   };
-
-  // console.log("currentgame", currentGame)
 
   return (
     <div className="relative w-full sm:items-center md:gap-5 bg-neutral-800 flex max-sm:flex-col p-10 h-96 justify-between rounded-md bg-neutral-800">
