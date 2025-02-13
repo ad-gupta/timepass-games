@@ -21,7 +21,7 @@ const GameBox = ({ game, setOpen, setIsToUpdate }) => {
     <div className="relative w-full sm:items-center md:gap-5 bg-neutral-800 flex max-sm:flex-col p-10 h-96 justify-between rounded-md bg-neutral-800">
       <img
         src={game.gamePic}
-        className="sm:w-[40%] max-sm:h-[70%] h-[80%] lg:h-full rounded-lg shadow-neutral-800 shadow-md"
+        className="sm:w-[40%] max-sm:h-32 h-[80%] lg:h-full rounded-lg shadow-neutral-800 shadow-md"
       />
       <div key={game.id} className="p-5 w-full">
         <div className="flex flex-col sm:gap-5">
@@ -40,7 +40,7 @@ const GameBox = ({ game, setOpen, setIsToUpdate }) => {
       </div>
       <button
         onClick={() => setMenuVisible(prev => !prev)}
-        className="h-fit text-xl absolute top-10 right-10"
+        className="h-fit text-xl absolute top-10 right-10 max-sm:top-5 max-sm:right-5"
       >
         <BsThreeDotsVertical />
       </button>
